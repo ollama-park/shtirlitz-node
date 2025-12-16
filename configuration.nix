@@ -8,7 +8,11 @@
   ];
 
   networking.hostName = "shtirlitz";
-
+  networking.nameservers = [
+    "1.1.1.1"
+    "8.8.8.8"
+  ];
+  
   boot.loader.grub = {
     enable = true;
     device = "/dev/sda";
@@ -33,6 +37,7 @@
       openssh.authorizedKeys.keys = [
         ''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG/6GNBs/+NewQ6AK4igl7dZp8+HgCUzl++eIBV/3TGk terow-rist@nixos''
         ''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDP+CjPP2R8NSbGNPbHXJmkgY/e0XdvSyLxypKtDE2sF root@rick''
+        ''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBBZZ8BVy4OXqo6toIoECZq09jK6t0msGAcLxcc4O3K+ root@asshole''
       ];
     };
   };
