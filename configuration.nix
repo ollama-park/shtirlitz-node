@@ -3,6 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ./systempkgs.nix
+    ./wg.nix
 #    ./diskoteka.nix
   ];
 
